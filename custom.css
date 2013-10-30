@@ -1,0 +1,55 @@
+/*
+.div.cell{
+    font-size: 150%;
+}
+.rendered_html{
+    font-size: 150%;
+}
+*/
+/*
+.reveal li {
+    font-size: 30px;
+}
+*/
+
+/* font size */
+.reveal {
+    font-size: 50px;
+}
+
+.reveal li{
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.reveal {
+  overflow-y: hidden;
+}
+
+.reveal .cell {
+    font-size: 30px;
+}
+
+
+/*Some css fixes to use night theme with IPython slides*/
+/*
+body {
+    background-color: #111111;
+}
+.reveal p {
+    color: white;
+}
+.reveal ul, ol {
+    color: white;
+}
+div.output_area pre {
+    color: white;
+}
+div.output_stderr {
+    background: #F00;
+}
+.reveal table th, .reveal table td {
+    color: white;
+}
+*/

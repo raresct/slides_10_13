@@ -1,30 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/reveal.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/theme/simple.css" id="theme">
-
-<!-- For syntax highlighting -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/css/zenburn.css">
-
-<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-<script>
-document.write( '<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-</script>
-
-<!--[if lt IE 9]>
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/html5shiv.js"></script>
-<![endif]-->
-
+<meta charset="UTF-8">
+<title>[]</title>
 <style type="text/css">
     .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
@@ -1673,66 +1651,48 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-.reveal {
-font-size: 20px;
-overflow-y: auto;
-overflow-x: hidden;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal pre {
-width: 95%;
-padding: 0.4em;
-margin: 0px;
-font-family: monospace, sans-serif;
-font-size: 80%;
-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+.input_area {
+  padding: 0.2em;
 }
-.reveal section img {
-border: 0px solid black;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal .slides {
-text-align: left;
-}
-.reveal.fade {
-opacity: 1;
-}
-div.input_area {
-padding: 0.06em;
-}
-div.code_cell {
-background-color: transparent;
-}
-div.prompt {
-width: 11ex;
-padding: 0.4em;
-margin: 0px;
-font-family: monospace, sans-serif;
-font-size: 80%;
-text-align: right;
-}
-div.output_area pre {
-font-family: monospace, sans-serif;
-font-size: 80%;
-}
-div.output_prompt {
-    /* 5px right shift to account for margin in parent container */
-    margin: 5px 5px 0 0;
-}
-.rendered_html p {
-text-align: inherit;
+
+pre {
+    padding: 0.2em;
+    border: none;
+    margin: 0px;
+    font-size: 13px;
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
+<script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
 </head>
-
 <body>
-<div class="reveal">
-<div class="slides">
-<div style=display:none>
-    
+
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -1758,16 +1718,10 @@ In&nbsp;[5]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
-Probabilistic Logic
+Probabilistic Logic - A Biased Review
 </h1>
-<h2 align="center">
-A Biased Review
-</h2>
 <h2 align="center">
 Călin-Rareș Turliuc
 </h2>
@@ -1780,9 +1734,7 @@ Călin-Rareș Turliuc
 
 
 
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Summary
@@ -1795,25 +1747,19 @@ Summary
 <li>Demo</li>
 <li>Future work, Conclusions</li>
 </ol>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Short Bio
 </h1>
 
-<center>
-<img src="pix/romania_ball.png">
-</center>
-
 <ul>
 <li>First Name: <em>Rareș</em> (rah-rehsh)</li>
-<li>Msc 2011, PhD (started April 2012)</li>
-<li>ICCSW steering committee (2012, 2013)</li>
+<li>Msc 2011, PhD (started April 2012, s: A. Russo, K. Broda)</li>
+<li><img width="100" src="pix/iccsw_logo.png"> steering committee (also 2012)</li>
+<li><img width="100" src="pix/github_logo.png"> <a href="https://github.com/raresct">raresct</a></li>
 </ul>
-<p><img width="70" src="pix/github_logo.png"> <a href="https://github.com/raresct">raresct</a></p>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 align=center>
 Interests
@@ -1827,12 +1773,6 @@ Computing
 <li>probabilistic logic (inference, learning)</li>
 <li>applications</li>
 </ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 align=center>
-Interests (2)
-</h2>
-
 <h3>
 Non-Computing
 </h3>
@@ -1844,9 +1784,7 @@ Non-Computing
 <li>starcraft II</li>
 <li>tennis, ping pong, swimming &amp; sauna</li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Introduction
@@ -1856,19 +1794,23 @@ Introduction
 Big Data
 </h3>
 <blockquote>
-    
-To find a small needle in a haystack, you need a big haystack.
+    <p>
+To find a smaller needle in the haystack,
+</p>
+    <p>
+you need a bigger haystack.
+</p>
 </blockquote>
 
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Introduction (2)
 </h1>
 
 <h3>
-State of the Art : Statistical Machine Learning (ML)
+State of the Art: Statistical Machine Learning (ML)
 </h3>
 
 <center><object width="300" data="files/pix/ml1.svg" type="image/svg+xml">
@@ -1876,31 +1818,26 @@ State of the Art : Statistical Machine Learning (ML)
 <img src="pix/ml1.png" >
 </object></center>
 
-
-
-
-<center><object width="300" data="files/pix/sub.svg" type="image/svg+xml">
-    
-<img src="pix/sub.png" >
-</object></center>
-
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
 <p>Pros</p>
 <ul>
 <li>it works (+/- theoretical ML)</li>
 <li>it scales (only some algorithms for now)</li>
 </ul>
 <p>Cons</p>
-<p><img width="350" src="pix/everywhere_meme.jpg"></p>
-</div></section><section>
+<p><img width="300" src="pix/everywhere_meme.jpg"></p>
+<center><object width="300" data="files/pix/sub.svg" type="image/svg+xml">
+    
+<img src="pix/sub.png" >
+</object></center>
+
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Introduction (3)
 </h1>
 
 <h3> 
-State of the Art <em>of the 60's</em> : Logic
+States of the Art of the 60's: Logic
 </h3> 
 
 <center><object width="300" data="files/pix/ml2.svg" type="image/svg+xml">
@@ -1908,25 +1845,18 @@ State of the Art <em>of the 60's</em> : Logic
 <img src="pix/ml2.png" >
 </object></center>
 
-
-
-
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
 <p>Pros</p>
 <ul>
 <li>white box (almost)</li>
-<li>it should work (soundness, completeness)</li>
-<li>it should scale (1 op: resolution, tree proofs)</li>
+<li>it should work (rules, proofs, soundness, completeness)</li>
+<li>it should scale (only one operator: resolution, most proofs are tree-like)</li>
 </ul>
 <p>Cons</p>
 <ul>
 <li><strong>should</strong></li>
 <li>no numbers</li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Motivation
@@ -1940,7 +1870,7 @@ Why did statistics and logic diverge?
 Were they ever compared?
 </h3>
 <p>Spoiler: Yes!</p>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Motivation (2)
@@ -1950,15 +1880,15 @@ Motivation (2)
 <img src="pix/snoop_quote.jpg" >
 </center>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Motivation (3)
 </h1>
 
-<center><iframe src="pix/Pearl87ECF.pdf" width=1200 height=500></iframe></center>
+<center><iframe src="pix/Pearl87ECF.pdf" width=700 height=350></iframe></center>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Motivation (4)
@@ -1968,13 +1898,13 @@ Motivation (4)
 Best of Both Worlds? How?
 </h3>
 
-<center><object width="600" data="files/pix/ml3.svg" type="image/svg+xml">
+<center><object width="300" data="files/pix/ml3.svg" type="image/svg+xml">
     
-<img width="600" src="pix/ml3.png" >
+<img width="300" src="pix/ml3.png" >
 </object></center>
 
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Motivation (5)
@@ -1984,12 +1914,12 @@ Motivation (5)
 Best of Both Worlds? How?
 </h3>
 
-<center><object width="600" data="files/pix/ml4.svg" type="image/svg+xml">
+<center><object width="300" data="files/pix/ml4.svg" type="image/svg+xml">
     
-<img width="600" src="pix/ml4.png" >
+<img width="300" src="pix/ml4.png" >
 </object></center>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Motivation (6)
@@ -1999,14 +1929,12 @@ Motivation (6)
 Best of Both Worlds? How?
 </h3>
 
-<center><object width="600" data="files/pix/ml5.svg" type="image/svg+xml">
+<center><object width="300" data="files/pix/ml5.svg" type="image/svg+xml">
     
-<img width="600" src="pix/ml5.png" >
+<img width="300" src="pix/ml5.png" >
 </object></center>
 
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Probabilistic Abduction
@@ -2019,31 +1947,22 @@ Probabilistic Abduction
 
 
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
-Prob. Abduction (2)
+Probabilistic Abduction (2)
 </h1>
 
 <p><span class="math">\[ grass\_is\_wet \leftarrow rained \]</span> <span class="math">\[ grass\_is\_wet \leftarrow sprinkler\_on \]</span> <span class="math">\[ shoes\_wet \leftarrow grass\_wet \]</span></p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 align="center">
-Prob. Abduction (3)
-</h1>
-
 <p>Query: <span class="math">\[ Q = \lbrace shoes\_wet \rbrace\]</span></p>
 <p>Abducibles (in this case they are our solutions): <span class="math">\[rained\]</span> <span class="math">\[sprinkler\_on\]</span></p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
 <p>Probability over abducibles: <span class="math">\[P(rained) = 0.6\]</span> <span class="math">\[P(\lnot rained) = 0.4 \]</span> <span class="math">\[P(sprinkler\_on) = 0.7\]</span> <span class="math">\[P(\lnot sprinkler\_on) = 0.3 \]</span></p>
-<p>Truth value assignment to the abducibles</p>
-<p>= independent events.</p>
-</div></section><section>
+<p>Truth value assignment to the abducibles are independent events.</p>
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[15]:
+In&nbsp;[10]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&#39;pix/sprinkler.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s">&#39;&quot;&#39;</span><span class="p">)</span>
@@ -2058,7 +1977,7 @@ In&nbsp;[15]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[15]:</div>
+    Out[10]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
@@ -2067,9 +1986,9 @@ In&nbsp;[15]:
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>rained</th>
-      <th>sprinkler_on</th>
-      <th>P(rained, sprinkler_on)</th>
+      <th>rained_last_night</th>
+      <th>sprinkler_was_on</th>
+      <th>P(rained_last_night, sprinkler_was_on)</th>
     </tr>
   </thead>
   <tbody>
@@ -2108,81 +2027,54 @@ In&nbsp;[15]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
-Prob. Abduction (4)
+Probabilistic Abduction (3)
 </h1>
 
 <h3> 
 Inference
 </h3>
 
-<p>Need non-minimal solutions.</p>
-<p>Expres evidence as integrity constraints. (e.g. next slide)</p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><span class="math">\[ IC = \lbrace\]</span> <span class="math">\[ ic \leftarrow sprinkler\_on \]</span> <span class="math">\[ \rbrace \]</span> (i.e. we observe that the sprinkler was off)</p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
+<p>Probabilistic abduction should be non-minimal.</p>
+<p>Incorporate evidence as integrity constraints. E.g.:</p>
+<p>IC = <span class="math">\[ ic \leftarrow sprinkler\_on \]</span> (i.e. we observe that the sprinkler was off)</p>
 <p>The goal is to compute:</p>
 <p><span class="math">\[ P(Q  \vert IC) \]</span></p>
 <p>In our case: <span class="math">\[ P(Q  \vert IC) = \frac{P(Q, IC)}{P(IC)} = \frac{0.18}{0.18+0.12}=0.6 \]</span></p>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
-Prob. Abduction (5)
+Probabilistic Abduction (4)
 </h1>
 
 <h3> 
 Parameter learning
 </h3>
 <p>Observe queries: <span class="math">\[Q_{1}, \dots , Q_{n}\]</span></p>
-<p>Question: Prob. of the abducibles that maximizes the joint prob. of the queries.</p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Question: <span class="math">\[\DeclareMathOperator*{\argmax}{arg\,max} \argmax\limits_{\mathbf{\theta}}\ P_{\theta}(Q_{1}, \dots, Q_{n})\]</span></p>
-<p>Answer: Expectation-Maximization (EM) algorithm</p>
-<p>...or even better: Variational EM.</p>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 align="center">
-Prob. Abduction (6)
-</h1>
-
-<p>Other probabilistic-logical formalisms</p>
-<ul>
-<li>ProbLog (I &amp; II)</li>
-<li>PRiSM</li>
-<li>LPADs</li>
-<li>Markov logic</li>
-<li>BLOG</li>
-<li>many others</li>
-</ul>
-</div></section>
-    </section><section>
-    <section>
+<p>Question: Probability of the abducibles that maximizes the joint probability of the queries.</p>
+<p>Answer: Expectation-Maximization (EM) algorithm (better: Variational EM)</p>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center"> 
 Demo
 </h1>
 
 <h3 align="center">
-&quot;One&quot; line music recommender system!
+One line music recommender system!
 </h3>
 
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <center>
 <img src="pix/norvig_lincoln_last_slide.gif" >
 </center>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
-Conclusions
+Future Work and Conclusions
 </h1>
 
 <h3>
@@ -2195,11 +2087,6 @@ Done
 <li>application in a biological gene network model</li>
 <li>hopefully interesting demo</li>
 </ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 align="center">
-Conclusions (2)
-</h1>
 <h3>
 To Do
 </h3>
@@ -2211,7 +2098,7 @@ To Do
 <li>better parameter learning methods</li>
 <li>structure learning</li>
 </ul>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 align="center">
 Thank you!
@@ -2226,85 +2113,5 @@ Slides on github.
 </center>
 
 </div>
-</div>
-</div>
-
-<!--
-Uncomment the following block and the addthis_widget.js (see below inside dependencies)
-to get enable social buttons.
--->
-
-<!--
-<div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:20px;top:20px;">
-<a class="addthis_button_twitter"></a>
-<a class="addthis_button_google_plusone_share"></a>
-<a class="addthis_button_linkedin"></a>
-<a class="addthis_button_facebook"></a>
-<a class="addthis_button_more"></a>
-</div>
--->
-
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/head.min.js"></script>
-
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/js/reveal.js"></script>
-
-<script>
-
-// Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-controls: true,
-progress: true,
-history: true,
-
-theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
-
-// Optional libraries used to extend on reveal.js
-dependencies: [
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/classList.js", condition: function() { return !document.body.classList; } },
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
-// { src: 'http://s7.addthis.com/js/300/addthis_widget.js', async: true},
-]
-});
-</script>
-
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-    },
-    displayAlign: 'left', // Change this to 'center' to center equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script>
-<!-- End of mathjax configuration -->
-
-<script>
-//  We wait for the onload function to load MathJax after the page is completely loaded.
-//  MathJax is loaded 1 unit of time after the page is ready.
-//  This hack prevent problems when you load multiple js files (i.e. social button from addthis).
-//
-window.onload = function () {
-  setTimeout(function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  },1)
-}
-</script>
-
-<script>
-Reveal.addEventListener( 'slidechanged', function( event ) {
-MathJax.Hub.Rerender(event.currentSlide);
-});
-</script>
-
 </body>
-
 </html>

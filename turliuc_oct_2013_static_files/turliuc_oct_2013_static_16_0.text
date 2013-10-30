@@ -1,0 +1,5 @@
+  rained_last_night sprinkler_was_on  P(rained_last_night, sprinkler_was_on)
+0             False            False                                    0.12
+1             False             True                                    0.28
+2              True            False                                    0.18
+3              True             True                                    0.42

@@ -1,0 +1,16 @@
+digraph G {
+    rankdir=LR;
+    bgcolor=white;
+    node [style=filled, shape="circle", fillcolor="gray", fixedsize=true, height=1.5, width=1.5, fontsize=18];
+    node [ label="end" ]end;
+    node [ fillcolor="black",label="magic", fontcolor="white" ]magic;
+    node [ fillcolor="white", label="logic", fontcolor="black" ]logic;
+    node [ fillcolor="black", label="combine", fontcolor="white" ]combine;
+    node [ fillcolor="gray",label="start", fontcolor="black" ]start;
+    start -> magic;
+    start -> logic;
+    magic -> combine;
+    logic -> combine;
+    combine -> end;
+    label = "Parallelize and Combine (e.g. weigh)";
+}

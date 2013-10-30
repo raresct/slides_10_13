@@ -1,0 +1,5 @@
+"rained_last_night" "sprinkler_was_on" "P(rained_last_night, sprinkler_was_on)"
+"false" "false" "0.12"
+"false" "true" "0.28"
+"true" "false" "0.18"
+"true" "true" "0.42"

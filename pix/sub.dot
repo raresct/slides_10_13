@@ -1,0 +1,5 @@
+digraph G {
+    rankdir=LR;
+    bgcolor=black;
+    node [ shape="rectangle",fillcolor="black",label="*magic = Statistics, Probability, Linear Algebra, Calculus etc.", fontcolor="white", fontsize=16 ]magic;
+}
